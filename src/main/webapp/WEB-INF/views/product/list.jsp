@@ -22,7 +22,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach item="${requestScope.list}" var="dto">
+			<c:forEach items="${requestScope.list}" var="dto">
 			<tr>
 				<td>${pageScope.dto.productNum}</td>
 				<td><a href="./detail?productNum=${dto.productNum}">${pageScope.dto.productName}</td>

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping(value = "/bank/*")
+@RequestMapping(value = "/product/*")
 public class BankController {
 	
 	private Bank_DAO bank_DAO;
@@ -33,7 +33,7 @@ public class BankController {
 	@RequestMapping(value = "detail", method = RequestMethod.GET)
 	public String detail(Long productNum, Model model ) throws Exception {
 
-		return "bank/detail";
+		return "product/detail";
 	}
 
 }
