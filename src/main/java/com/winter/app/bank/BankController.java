@@ -1,6 +1,6 @@
 package com.winter.app.bank;
 
-import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,7 +21,11 @@ public class BankController {
 	@RequestMapping(value = "list", method = RequestMethod.GET)
 	public ModelAndView  getList() throws Exception {
 		ModelAndView mv = new ModelAndView();
-
+		Bank_DAO bank_DAO = new Bank_DAO();
+		List<Bank_DTO> ar=bank_DAO.getList();
+		
+		mv.addObject("list", ar);
+		mv.setViewName("product/list");
 		return mv;
 	}
 
