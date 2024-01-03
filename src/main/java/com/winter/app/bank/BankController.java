@@ -29,12 +29,13 @@ public class BankController {
 		mv.setViewName("product/list");
 		return mv;
 	}
-
+//a
 	// detail
 	@RequestMapping(value = "detail", method = RequestMethod.GET)
 	public String detail(Long productNum, Model model ) throws Exception {
-//ㅁㄴㅁ
-		return "bank/detail";
+    
+		return "product/detail";
+
 	}
 
 }
