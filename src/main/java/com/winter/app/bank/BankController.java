@@ -33,7 +33,7 @@ public class BankController {
 	// detail
 	@RequestMapping(value = "detail", method = RequestMethod.GET)
 	public String detail(Long productNum, Model model ) throws Exception {
-
+//ㅁㄴㅁ
 		return "bank/detail";
 	}
 
