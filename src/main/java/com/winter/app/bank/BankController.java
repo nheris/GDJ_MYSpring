@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping(value = "/bank/*")
+@RequestMapping(value = "/product/*")
 public class BankController {
 	
 	private Bank_DAO bank_DAO;
@@ -21,6 +21,7 @@ public class BankController {
 	@RequestMapping(value = "list", method = RequestMethod.GET)
 	public ModelAndView  getList() throws Exception {
 		ModelAndView mv = new ModelAndView();
+		System.out.println("List");
 		Bank_DAO bank_DAO = new Bank_DAO();
 		List<Bank_DTO> ar=bank_DAO.getList();
 		
