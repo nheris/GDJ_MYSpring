@@ -36,7 +36,5 @@ public class Bank_DTO {
    private String productName;
    private String productContents;
    private Double productRate;
-   private Double productJumsu;
-   
-   
+   private Double productJumsu;     
 }
