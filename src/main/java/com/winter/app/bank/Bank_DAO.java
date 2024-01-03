@@ -36,6 +36,7 @@ public class Bank_DAO {
 		Connection con = DBConnector.getConnector();
 		String sql = "SELECT * FROM product WHERE PRODUCTNUM=?";
 		PreparedStatement st = con.prepareStatement(sql);
+		st.setLong(1,bank_DTO.getProductNum());
 		ResultSet rs = st.executeQuery();
 		Bank_DTO resultDTO=null;
 		if(rs.next()) {
