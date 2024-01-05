@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!doctype html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -29,8 +31,8 @@
 						aria-current="page" href="/">Home</a></li>
 					<li class="nav-item"><a class="nav-link" href="/regions/list">Regions</a>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="/department/list">Departments</a>
-					</li>
+					<li class="nav-item"><a class="nav-link"
+						href="/department/list">Departments</a></li>
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" href="#" role="button"
 						data-bs-toggle="dropdown" aria-expanded="false"> Dropdown link
@@ -45,37 +47,24 @@
 			</div>
 		</div>
 	</nav>
-	<div class="container-dluid border border-warning mt-4">
-		<section>
-			<div id="carouselExampleAutoplaying" class="carousel slide"
-				data-bs-ride="carousel">
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<img src="/resources/images/f1.jpg" class="d-block w-100" alt="...">
-					</div>
-					<div class="carousel-item">
-						<img src="/resources/images/f2.jpg" class="d-block w-100" alt="...">
-					</div>
-					<div class="carousel-item">
-						<img src="/resources/images/f3.jpg" class="d-block w-100" alt="...">
-					</div>
-				</div>
-				<button class="carousel-control-prev" type="button"
-					data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Previous</span>
-				</button>
-				<button class="carousel-control-next" type="button"
-					data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Next</span>
-				</button>
-			</div>
+
+	<section class="container-fluid">
+		<div>
+			<c:if test="${not empty dto}">
+				<h3>${dto.department_id}</h3>
+				<h3>${dto.department_name}</h3>
+				<h3>${dto.manager_id}</h3>
+				<h3>${dto.location_id}</h3>
+			</c:if>
+		</div>
+		<c:if test="${empty dto}">
+			<h3>없음</h3>
+		</c:if>
+	</section>
 
 
 
-		</section>
-	</div>
+
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

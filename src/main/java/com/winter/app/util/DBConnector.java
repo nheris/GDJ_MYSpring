@@ -10,8 +10,8 @@ public class DBConnector {
 	//1. IP:PORT
 	//2. ID, PW
 	public static Connection getConnector() throws Exception {
-		String user="user02";
-		String password="user02";
+		String user="user01";
+		String password="user01";
 		String url="jdbc:oracle:thin:@13.209.98.105:1521:xe";
 		String driver="oracle.jdbc.driver.OracleDriver";
 		

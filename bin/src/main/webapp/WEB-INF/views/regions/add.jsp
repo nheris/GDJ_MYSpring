@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
@@ -29,8 +29,8 @@
 						aria-current="page" href="/">Home</a></li>
 					<li class="nav-item"><a class="nav-link" href="/regions/list">Regions</a>
 					</li>
-					<li class="nav-item"><a class="nav-link" href="/department/list">Departments</a>
-					</li>
+					<li class="nav-item"><a class="nav-link"
+						href="/department/list">Departments</a></li>
 					<li class="nav-item dropdown"><a
 						class="nav-link dropdown-toggle" href="#" role="button"
 						data-bs-toggle="dropdown" aria-expanded="false"> Dropdown link
@@ -45,37 +45,35 @@
 			</div>
 		</div>
 	</nav>
-	<div class="container-dluid border border-warning mt-4">
-		<section>
-			<div id="carouselExampleAutoplaying" class="carousel slide"
-				data-bs-ride="carousel">
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<img src="/resources/images/f1.jpg" class="d-block w-100" alt="...">
-					</div>
-					<div class="carousel-item">
-						<img src="/resources/images/f2.jpg" class="d-block w-100" alt="...">
-					</div>
-					<div class="carousel-item">
-						<img src="/resources/images/f3.jpg" class="d-block w-100" alt="...">
-					</div>
+
+	<section id="contents" class="container-fluid">
+		<div class="row mt-3">
+			<form action="add" method="post">
+				<div class="mb-3">
+					<label for="regionId" class="form-label">RegionID</label> <input
+						type="text" name="region_id" class="form-control" id="regiondId"
+						aria-describedby="emailHelp">
+					<div id="emailHelp" class="form-text">We'll never share your
+						email with anyone else.</div>
 				</div>
-				<button class="carousel-control-prev" type="button"
-					data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Previous</span>
-				</button>
-				<button class="carousel-control-next" type="button"
-					data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Next</span>
-				</button>
-			</div>
+				<div class="mb-3">
+					<label for="region_name" class="form-label">RegionName</label> <input
+												
+					name="region_name"	type="text" class="form-control" id="region_name">
+				</div>
+				<button type="submit" class="btn btn-primary">Add</button>
+			</form>
+
+		</div>
+
+
+	</section>
 
 
 
-		</section>
-	</div>
+
+
+
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
